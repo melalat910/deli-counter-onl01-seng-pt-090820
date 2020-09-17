@@ -11,12 +11,12 @@ def line(array)
 end
 
 def take_a_number(array, name)
-  i=0 
+  i=0
   counter = 1
-  while array.count != name.length 
+  while array.count != name.length
     array[i] = counter
-    i+=1 
-    counter +=1 
+    i+=1
+    counter +=1
   end
   if array.count > 1
     puts "The line is currently:"
