@@ -10,17 +10,16 @@ def line(array)
  end
 end
 
-def take_a_number(array, name)
-  i=0
-  counter = 1
-  while array.count != name.length
-    array[i] = counter
-    i+=1
-    counter +=1
+def take_a_number(katz_deli, name)
+  katz_deli.push(name)
+  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+end
+def now_serving(array)
+  if array.empty?
+    puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{array[0]}."
+    array.shift
   end
-  if array.count > 1
-    puts "The line is currently:"
-  end
-  name.each_with_index {|val, index| puts "#{index+1}. #{val}"}
-  end
+end
   
